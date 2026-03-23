@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Moshivisuals</title>
-  <link href="https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;1,400&family=Dancing+Script:wght@500;700&family=DM+Sans:wght@300;400&display=swap" rel="stylesheet"/>
+  <title>Moshi Visuals</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pinyon+Script&family=Lora:ital,wght@0,400;0,500;1,400&family=Dancing+Script:wght@500;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
     :root {
@@ -50,23 +50,13 @@
       margin-bottom: 10px;
       animation: fadeUp 0.7s ease both;
     }
-    .script-tag {
-      font-family: 'Dancing Script', cursive;
-      font-size: 15px;
-      font-weight: 500;
-      color: var(--brown-light);
-      letter-spacing: 0.02em;
-      margin-bottom: 6px;
-      display: block;
-    }
     .name {
-      font-family: 'Lora', serif;
-      font-size: 32px;
-      font-weight: 500;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
+      font-family: 'Pinyon Script', cursive;
+      font-size: 52px;
+      font-weight: 400;
+      letter-spacing: 0.04em;
       color: var(--dark);
-      line-height: 1;
+      line-height: 1.1;
     }
     .tagline {
       margin-top: 10px;
@@ -177,6 +167,12 @@
       position: relative;
       z-index: 1;
       transition: background 0.3s;
+      overflow: hidden;
+    }
+    .link-icon img {
+      width: 22px;
+      height: 22px;
+      object-fit: contain;
     }
     .link-item:hover .link-icon { background: rgba(122,85,72,0.08); }
     .link-text {
@@ -189,14 +185,7 @@
       font-size: 13px;
       color: var(--brown-light);
       line-height: 1;
-      margin-bottom: 1px;
-    }
-    .link-label strong {
-      font-family: 'DM Sans', sans-serif;
-      font-size: 11px;
-      font-weight: 500;
-      letter-spacing: 0.06em;
-      color: var(--brown);
+      margin-bottom: 2px;
     }
     .link-title {
       font-family: 'Lora', serif;
@@ -213,6 +202,37 @@
       z-index: 1;
     }
     .link-item:hover .link-arrow { transform: translateX(4px); opacity: 1; }
+
+    /* Affiliate code badge */
+    .code-row {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      margin-top: 6px;
+    }
+    .code-arrow {
+      font-size: 11px;
+      color: var(--brown-light);
+      opacity: 0.7;
+    }
+    .code-badge {
+      display: inline-block;
+      background: rgba(122,85,72,0.12);
+      border: 1px dashed rgba(122,85,72,0.35);
+      border-radius: 5px;
+      padding: 2px 8px;
+      font-family: 'DM Sans', sans-serif;
+      font-size: 11px;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      color: var(--brown);
+    }
+    .code-label {
+      font-size: 11px;
+      color: var(--muted);
+      font-weight: 300;
+    }
+
     .link-item:nth-child(1) { animation-delay: 0.2s; }
     .link-item:nth-child(2) { animation-delay: 0.3s; }
     .link-item:nth-child(3) { animation-delay: 0.4s; }
@@ -248,8 +268,7 @@
   <div class="container">
 
     <div class="header">
-      <span class="script-tag">content creator</span>
-      <div class="name">Moshivisuals</div>
+      <div class="name">Moshi Visuals</div>
       <div class="tagline">a visual diary of my lifestyle, photographs &amp; pinterest board</div>
     </div>
 
@@ -271,16 +290,21 @@
     <div class="links">
 
       <a href="https://siraatskitchen.com/moshivisuals" class="link-item" target="_blank" rel="noopener">
-        <div class="link-icon">🍳</div>
+        <div class="link-icon"><img src="https://www.google.com/s2/favicons?domain=siraatskitchen.com&sz=64" alt="Siraatskitchen"></div>
         <div class="link-text">
-          <div class="link-label">15% off with code <strong>MOSHIVISUALS</strong></div>
-          <div class="link-title">Siraat Kitchen</div>
+          <div class="link-label">shop cookware</div>
+          <div class="link-title">Siraatskitchen</div>
+          <div class="code-row">
+            <span class="code-arrow">→</span>
+            <span class="code-label">15% off with code</span>
+            <span class="code-badge">MOSHIVISUALS</span>
+          </div>
         </div>
         <span class="link-arrow">→</span>
       </a>
 
       <a href="https://www.amazon.nl/gp/profile/amzn1.account.AHJE44R26SNKLWEN3FFL3RRBTK7A" class="link-item" target="_blank" rel="noopener">
-        <div class="link-icon">🛍️</div>
+        <div class="link-icon"><svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 24 24" fill="#2e2c1f"><path d="M13.958 10.09c0 1.232.029 2.256-.591 3.351-.502.891-1.301 1.438-2.186 1.438-1.214 0-1.922-.924-1.922-2.292 0-2.692 2.415-3.182 4.699-3.182v.685zm3.186 7.705c-.209.189-.512.201-.745.076-1.047-.872-1.234-1.276-1.814-2.106-1.734 1.768-2.962 2.297-5.209 2.297-2.66 0-4.731-1.641-4.731-4.925 0-2.565 1.391-4.309 3.37-5.164 1.715-.754 4.11-.891 5.942-1.095v-.41c0-.753.06-1.642-.384-2.294-.385-.579-1.124-.818-1.774-.818-1.206 0-2.282.618-2.545 1.9-.054.285-.261.567-.549.582l-3.061-.333c-.259-.056-.545-.266-.472-.66.704-3.716 4.06-4.838 7.066-4.838 1.537 0 3.547.41 4.758 1.574 1.537 1.436 1.39 3.352 1.39 5.438v4.923c0 1.481.616 2.13 1.194 2.929.204.287.249.63-.01.843l-2.386 2.081zm3.617 1.34C18.497 21.56 15.47 23 12.03 23 7.244 23 2.96 21.152.469 18.001c-.199-.243.021-.576.285-.387 2.719 1.578 6.077 2.529 9.546 2.529 2.34 0 4.914-.485 7.285-1.493.357-.152.657.234.176.485zm.906-2.969c-.272-.349-1.798-.165-2.484-.083-.208.025-.24-.156-.053-.287 1.217-.854 3.213-.608 3.446-.321.234.288-.061 2.285-1.202 3.238-.175.146-.342.068-.264-.125.256-.641.831-2.073.557-2.422z"/></svg></div>
         <div class="link-text">
           <div class="link-label">shop with me</div>
           <div class="link-title">Amazon Storefront</div>
@@ -289,7 +313,7 @@
       </a>
 
       <a href="https://www.instagram.com/moshivisuals/" class="link-item" target="_blank" rel="noopener">
-        <div class="link-icon">📸</div>
+        <div class="link-icon"><img src="https://cdn.simpleicons.org/instagram/2e2c1f" alt="Instagram"></div>
         <div class="link-text">
           <div class="link-label">follow me</div>
           <div class="link-title">Instagram</div>
@@ -298,7 +322,7 @@
       </a>
 
       <a href="https://www.tiktok.com/@moshivisuals" class="link-item" target="_blank" rel="noopener">
-        <div class="link-icon">🎵</div>
+        <div class="link-icon"><img src="https://cdn.simpleicons.org/tiktok/2e2c1f" alt="TikTok"></div>
         <div class="link-text">
           <div class="link-label">follow me</div>
           <div class="link-title">TikTok</div>
